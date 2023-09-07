@@ -16,6 +16,12 @@ public class PlayCardRequest {
 
   private CardColour changeColour;
 
+  public Boolean getCallUno() {
+    return callUno;
+  }
+
+  private Boolean callUno;
+
   public CardValue getCardValue() {
     return cardValue;
   }
