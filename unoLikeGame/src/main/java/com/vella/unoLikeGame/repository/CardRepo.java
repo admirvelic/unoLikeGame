@@ -14,7 +14,7 @@ public interface CardRepo extends JpaRepository<Card, Long> {
     @Override
     Optional<Card> findById(Long id);
 
-    List<Optional<Card>> getAllByCardLocation(CardLocation cardLocation);
+    List<Card> getAllByCardLocation(CardLocation cardLocation);
 
     List<Card> getAllByUser(User user);
 
@@ -23,4 +23,5 @@ public interface CardRepo extends JpaRepository<Card, Long> {
     void deleteAllByUser(User user);
 
     void deleteAllByRoom(Room room);
+
 }
