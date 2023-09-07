@@ -8,7 +8,6 @@ import com.vella.unoLikeGame.model.room.Room;
 import com.vella.unoLikeGame.model.user.SeeUsersResponse;
 import com.vella.unoLikeGame.model.user.User;
 import com.vella.unoLikeGame.model.user.UserRepository;
-import com.vella.unoLikeGame.model.user.seeUsersResponse;
 import com.vella.unoLikeGame.repository.CardRepo;
 import com.vella.unoLikeGame.repository.RoomRepo;
 import com.vella.unoLikeGame.security.token.TokenRepository;
