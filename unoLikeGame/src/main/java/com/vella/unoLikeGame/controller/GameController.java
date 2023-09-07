@@ -35,4 +35,9 @@ public class GameController {
     public Card drawCard(@PathVariable Long id, @RequestHeader(name="Authorization") String token) throws CustomErrorException, IOException{
         return gameService.drawCard(id, token);
     }
+
+    @PostMapping("/{id}/chalange")
+    public String CallNoUno(@RequestBody Long calledUserId, @PathVariable Long id, @RequestHeader(name="Authorization") String token) throws CustomErrorException, IOException{
+        return gameService.CallNoUno(id,token,calledUserId);
+    }
 }
