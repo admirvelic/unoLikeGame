@@ -39,4 +39,6 @@ public class Room {
     private RoomStatus roomStatus;
 
     private CardEffect effectOnUser;
+
+    private User lastWinner;
 }
