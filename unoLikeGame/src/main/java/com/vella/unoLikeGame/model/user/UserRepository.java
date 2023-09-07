@@ -11,6 +11,8 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
   Optional<User> findByEmail(String email);
 
+  Optional<User> findById(Long id);
+
   @Query(value = """
   SELECT u FROM User u INNER JOIN Token t\s
   on u.id = t.user.id\s
