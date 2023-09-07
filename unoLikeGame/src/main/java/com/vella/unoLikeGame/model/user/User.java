@@ -31,6 +31,10 @@ public class User implements UserDetails {
   @JoinColumn(name = "roomId")
   private Room room;
 
+  private Boolean calledUno;
+
+  private Boolean canCallUno;
+
   @Enumerated(EnumType.STRING)
   private Role role;
 
