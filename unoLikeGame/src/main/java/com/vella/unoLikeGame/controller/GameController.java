@@ -5,6 +5,7 @@ import com.vella.unoLikeGame.exception.CustomErrorException;
 import com.vella.unoLikeGame.model.card.Card;
 import com.vella.unoLikeGame.model.card.PlayCardRequest;
 import com.vella.unoLikeGame.model.card.SeeCardsResponse;
+import com.vella.unoLikeGame.model.user.SeeUsersResponse;
 import com.vella.unoLikeGame.service.GameService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -39,5 +40,10 @@ public class GameController {
     @PostMapping("/{id}/chalange")
     public String CallNoUno(@RequestBody Long calledUserId, @PathVariable Long id, @RequestHeader(name="Authorization") String token) throws CustomErrorException, IOException{
         return gameService.CallNoUno(id,token,calledUserId);
+    }
+
+    @GetMapping("/{id}/players")
+    public List<SeeUsersResponse> seeUsers (@PathVariable Long id, @RequestHeader(name="Authorization") String token) throws CustomErrorException, IOException{
+        return gameService.seeUsers(id, token);
     }
 }
