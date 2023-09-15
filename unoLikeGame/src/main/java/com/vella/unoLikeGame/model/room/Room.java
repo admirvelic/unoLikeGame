@@ -36,8 +36,6 @@ public class Room {
 
     private List<Card> lastPlayed;
 
-    private RoomStatus roomStatus;
-
     private CardEffect effectOnUser;
 
     private User lastWinner;

@@ -1,4 +1,4 @@
-package com.vella.blog.view.error;
+package com.vella.unoLikeGame.error;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import java.util.Date;

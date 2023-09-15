@@ -1,4 +1,4 @@
-package com.vella.security.auth;
+package com.vella.unoLikeGame.security.auth;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

@@ -1,11 +1,11 @@
-package com.vella.security.auth;
+package com.vella.unoLikeGame.security.auth;
 
-import com.vella.security.config.JwtService;
-import com.vella.security.token.Token;
-import com.vella.security.token.TokenRepository;
-import com.vella.security.token.TokenType;
-import com.vella.security.user.User;
-import com.vella.security.user.UserRepository;
+import com.vella.unoLikeGame.security.config.JwtService;
+import com.vella.unoLikeGame.security.token.Token;
+import com.vella.unoLikeGame.security.token.TokenRepository;
+import com.vella.unoLikeGame.security.token.TokenType;
+import com.vella.unoLikeGame.model.user.User;
+import com.vella.unoLikeGame.model.user.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

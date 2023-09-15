@@ -1,6 +1,6 @@
-package com.vella.security.auth;
+package com.vella.unoLikeGame.security.auth;
 
-import com.vella.security.user.Role;
+import com.vella.unoLikeGame.model.user.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

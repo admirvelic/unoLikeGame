@@ -1,4 +1,4 @@
-package com.vella.security.auth;
+package com.vella.unoLikeGame.security.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

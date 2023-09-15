@@ -16,7 +16,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
                         name = "Vella",
                         email = "vadmir04@gmail.com"
                 ),
-                description = "OpenApi documentation for blog service",
+                description = "OpenApi documentation for uno game",
                 title = "blog service - Vella",
                 version = "1.0",
                 license = @License(

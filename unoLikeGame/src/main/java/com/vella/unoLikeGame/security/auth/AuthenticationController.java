@@ -1,4 +1,4 @@
-package com.vella.security.auth;
+package com.vella.unoLikeGame.security.auth;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

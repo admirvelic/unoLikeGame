@@ -23,7 +23,7 @@ public class RoomController {
 
     @PostMapping("/create-room")
     public Room createRoom( @RequestHeader(name="Authorization") String token, @RequestBody CreateRoomRequest createRoomRequest) throws CustomErrorException, IOException{
-            return roomService.createRoom(token, createRoomRequest);
+            return roomService.createRoom(token);
 
     }
 
@@ -43,7 +43,7 @@ public class RoomController {
         roomService.deleteRoom(id, token);
     }
 
-    @GetMapping("/rooms")
+    @GetMapping("/list")
     public List<Room> seeAvailableRooms() throws CustomErrorException {
         return roomService.availableRooms();
     }

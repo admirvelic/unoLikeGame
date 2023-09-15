@@ -16,28 +16,27 @@ import lombok.NoArgsConstructor;
 @Table(name = "card")
 public class Card {
 
-    @Id
-    @GeneratedValue
-    private Integer id  ;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer id;
 
-    @Enumerated
-    private CardValue cardValue;
+  @Enumerated(EnumType.STRING)
+  private CardValue cardValue;
 
-    @Enumerated
-    private CardColour  cardColour;
+  @Enumerated(EnumType.STRING)
+  private CardColour cardColour;
 
-    @Enumerated
-    private CardEffect cardEffect;
+  @Enumerated(EnumType.STRING)
+  private CardEffect cardEffect;
 
-    @Enumerated
-    private CardLocation cardLocation;
+  @Enumerated(EnumType.STRING)
+  private CardLocation cardLocation;
 
-    @ManyToOne
-    @JoinColumn(name = "roomId")
-    private Room inRoom;
+  @ManyToOne
+  @JoinColumn(name = "roomId")
+  private Room inRoom;
 
-    @ManyToOne
-    @JoinColumn(name = "userId")
-    private User user;
-
+  @ManyToOne
+  @JoinColumn(name = "userId")
+  private User user;
 }

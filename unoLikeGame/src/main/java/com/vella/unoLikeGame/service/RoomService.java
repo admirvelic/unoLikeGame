@@ -35,25 +35,19 @@ public class RoomService {
   private final TokenRepository tokenRepo;
   private final UserRepository userRepo;
 
-  public Room createRoom(String token, CreateRoomRequest createRoomRequest) {
+  public Room createRoom(String token) {
     try {
       if (tokenRepo.findUserByToken(token).isEmpty()) {
         throw new IllegalArgumentException("Failed creating a room. User not found.");
       }
       User user = tokenRepo.findUserByToken(token).get();
-      RoomStatus roomStatus = createRoomRequest.getRoomStatus();
-
-      if (roomStatus == PRIVATE || roomStatus == PUBLIC) {
 
         Room createdRoom = new Room();
-        createdRoom.setRoomStatus(roomStatus);
         createdRoom.setHost(user);
         createdRoom.setGameStatus(GameStatus.WAITING);
         log.info("Created new room");
         return roomRepo.save(createdRoom);
-      } else {
-        throw new IllegalArgumentException("Failed creating a room. Room status not set");
-      }
+
     } catch (Exception e) {
       log.error("Error creating new blog {}", e.getMessage());
       throw new CustomErrorException(HttpStatus.BAD_REQUEST, e.getMessage());
@@ -356,6 +350,7 @@ public class RoomService {
       List<User> newListOfUsers = room.getUsersInRoom();
       newListOfUsers.remove(user);
       room.setUsersInRoom(newListOfUsers);
+      roomRepo.save(room);
       log.info("Successfully left room{}", room);
 
       if (room.getGameStatus().equals(GameStatus.RUNNING)) {

@@ -1,8 +1,10 @@
-package com.vella.blog.view.error;
+package com.vella.unoLikeGame.error;
 
-import com.vella.blog.exception.CustomErrorException;
+import com.vella.unoLikeGame.error.CustomControllerAdvice;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+
+import com.vella.unoLikeGame.exception.CustomErrorException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

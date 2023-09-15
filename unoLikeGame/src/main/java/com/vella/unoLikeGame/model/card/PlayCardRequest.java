@@ -1,13 +1,12 @@
 package com.vella.unoLikeGame.model.card;
 
-import jakarta.persistence.Entity;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NonNull;
 
 @Builder
 @AllArgsConstructor
-@Entity
 public class PlayCardRequest {
 
   @NonNull private CardValue cardValue;
@@ -16,11 +15,11 @@ public class PlayCardRequest {
 
   private CardColour changeColour;
 
+  private Boolean callUno;
+
   public Boolean getCallUno() {
     return callUno;
   }
-
-  private Boolean callUno;
 
   public CardValue getCardValue() {
     return cardValue;

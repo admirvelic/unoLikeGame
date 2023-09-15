@@ -1,6 +1,6 @@
 package com.vella.unoLikeGame.security.config;
 
-import com.vella.unoLikeGame.security.user.UserRepository;
+import com.vella.unoLikeGame.model.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
